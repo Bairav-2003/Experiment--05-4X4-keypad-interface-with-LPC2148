@@ -1,19 +1,17 @@
 # Experiment--05-4X4-keypad-interface-with-LPC2148
 
-Name : Bairav Skandan Loha
+Name : BAIRAV SKANDAN LOHA
 
-Roll no : 212221230010
+Roll no :212221230010
 
-Date of experiment : 06/11/2022
+Date of experiment : 06-11-22
 
  
-### Interfacing a 4X4 keypad LPC2148 ARM 7 Microcontroller:
+### Interfacing a 4X4 keypad LPC2148 ARM 7 Microcontroller 
 
-## Aim: 
-To Interface 4x4 keypad interface  LPC2148 ARM 7 and write a code for displaying the inputs on a 16x2 lcd 
-## Components required:
-Proteus ISIS professional suite, Kiel μ vision 5 Development environment 
-## Theory:
+## Aim: To Interface 4x4 keypad interface  LPC2148 ARM 7 and write a code for displaying the inputs on a 16x2 lcd 
+## Components required: Proteus ISIS professional suite, Kiel μ vision 5 Development environment 
+## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
 What is an ARM7 Processor?
@@ -66,7 +64,7 @@ With that current flow a positive voltage of +5V appears at R3 pin. Since all RO
 •	From previous step, we have known the COLUMN number of key pressed and now we know ROW number. With that we can match the key being pressed. We can take the key INPUT provided by this way for 4X4
 •	
 
-## Procedure:
+Procedure:
 For creation of project on    Kiel μ vision 5 Development environment (LPC21 XX/48/38)
 1.	Click on the menu Project — New µVision Project creates a new project. Select an empty folder and enter the project name, for example Project1. It is good practice to use a separate folder for each project.
 2.	Next, the dialog Select Device for Target opens.
@@ -143,15 +141,18 @@ Step 9: Select the hex file from the Kiel program folder and import the program 
 
 
 ## Kiel - Program:
-~~~
+```
 #include <lpc21xx.h> 
 #define RS (1<<0)
 #define RW (1<<1)
 #define E (1<<2)
+
 void LCD_command(unsigned char command);
 void  delay_ms(unsigned char time);
 void LCD_data(unsigned char data);
 void LCD_init() ;
+
+
 int main(void)
 {
  //PINSEL1 = 0x00000000;  //Configure PORT0 as GPIO
@@ -233,6 +234,7 @@ int main(void)
    }
 }
 
+
 //Function to generate software delay
 //Calibrated to 1ms
 void  delay_ms(unsigned char time)    
@@ -282,13 +284,28 @@ void LCD_init()
   delay_ms(10) ;//set cursor to 0th location 1st lne
  
 }
-~~~
+```
+
+
+
 ## Output screen shots :
+
 ### Display Off:
-![01](https://user-images.githubusercontent.com/91781810/199899764-80915431-53b7-497f-a7f3-d71ed5b49d12.jpg)
+![Screenshot (330)](https://user-images.githubusercontent.com/94154683/199757464-8a3f01ab-e1f9-4ae7-a6e2-8b41c3a35547.png)
+
 ### Display On:
-![02](https://user-images.githubusercontent.com/91781810/199899781-df8474e5-fa7b-4c56-a360-40305b5554f1.jpg)
+
+![Screenshot (331)](https://user-images.githubusercontent.com/94154683/199757518-f9d256f5-5b2f-483b-802d-b07c91d5a3a4.png)
+
 ### Circuit Diagram:
-![03](https://user-images.githubusercontent.com/91781810/199899795-76cd46f9-6f33-4cb1-ad77-08da5a256ae9.jpg)
+![Screenshot (333)](https://user-images.githubusercontent.com/94154683/199757660-6159817e-37eb-4f31-ae4e-1a4593e7a48e.png)
+
 ## Result :
 Interfacing a keypad 4x4 is interfaced  with LPC2148
+
+
+
+
+
+
+
